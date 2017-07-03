@@ -8,7 +8,11 @@ RUN	set -x \
 		ruby-bundler \
 		ruby-dev \
 		ruby-execjs \
-		zlib1g-dev
+		zlib1g-dev \
+	&& echo "source 'https://rubygems.org'" > /tmp/Gemfile \
+	&& echo "gem 'github-pages', group: :jekyll_plugins" >> /tmp/Gemfile \
+	&& bundle install --gemfile=/tmp/Gemfile \
+	&& rm /tmp/Gemfile*
 
 VOLUME	["/var/lib/github-pages"]
 WORKDIR	/var/lib/github-pages
