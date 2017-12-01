@@ -3,6 +3,7 @@ FROM	debian:9
 RUN	set -x \
 	&& apt update \
 	&& apt install -y \
+		cmake \
 		build-essential \
 		git \
 		bundler \
