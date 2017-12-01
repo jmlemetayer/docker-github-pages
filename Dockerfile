@@ -1,11 +1,11 @@
 FROM	debian:9
 
 RUN	set -x \
-	&& apt-get update \
-	&& apt-get install -y \
+	&& apt update \
+	&& apt install -y \
 		build-essential \
 		git \
-		ruby-bundler \
+		bundler \
 		ruby-dev \
 		ruby-execjs \
 		zlib1g-dev \
