@@ -4,11 +4,10 @@ RUN	set -x \
 	&& DEBIAN_FRONTEND=noninteractive \
 	&& apt update \
 	&& apt install -y \
-		cmake \
 		build-essential \
-		git \
 		bundler \
-		ruby-dev \
+		cmake \
+		git \
 		locales \
 		ruby-execjs \
 		zlib1g-dev \
