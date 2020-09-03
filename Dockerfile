@@ -15,7 +15,8 @@ RUN	set -x \
 	&& echo "source 'https://rubygems.org'" > /tmp/Gemfile \
 	&& echo "gem 'github-pages', group: :jekyll_plugins" >> /tmp/Gemfile \
 	&& bundle install --gemfile=/tmp/Gemfile \
-	&& rm /tmp/Gemfile*
+	&& rm /tmp/Gemfile* \
+	&& sed -i '/"theme"/d' /var/lib/gems/*/gems/github-pages-*/lib/github-pages/configuration.rb
 
 ENV	LANG en_US.utf8
 
