@@ -2,7 +2,7 @@
 
 trap "rm -rf _site/ .sass-cache/ .jekyll-metadata Gemfile*" EXIT
 
-cat > Gemfile << EOF
+cat << EOF > Gemfile
 source 'https://rubygems.org'
 gem 'github-pages', group: :jekyll_plugins
 EOF
