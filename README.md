@@ -2,13 +2,11 @@
 
 # Quick Start
 
-Run the GitHub Pages server docker image. Considering `/path/to/my/project` the
-directory containing the GitHub Pages sources:
+Run the GitHub Pages server docker image. First move to the directory where the
+GitHub Pages sources are located:
 
-    docker run --name my-github-pages \
-        --detach --restart unless-stopped \
-        --publish 4000:4000 \
-        --volume /path/to/my/project:/var/lib/github-pages \
+    docker run --rm --tty --publish 4000:4000 \
+        --volume ${PWD}:/var/lib/github-pages \
         jmlemetayer/github-pages
 
 # GitHub Metadata
@@ -28,10 +26,8 @@ generating a new personal access token on GitHub.com:
 
 Now you can use the `JEKYLL_GITHUB_TOKEN` environment variable:
 
-    docker run --name my-github-pages \
-        --detach --restart unless-stopped \
-        --publish 4000:4000 \
-        --volume /path/to/my/project:/var/lib/github-pages \
+    docker run --rm --tty --publish 4000:4000 \
+        --volume ${PWD}:/var/lib/github-pages \
         --env JEKYLL_GITHUB_TOKEN=123mytoken321 \
         jmlemetayer/github-pages
 
@@ -40,10 +36,8 @@ Now you can use the `JEKYLL_GITHUB_TOKEN` environment variable:
 You can override the `site.repository` by using the `PAGES_REPO_NWO`
 environment variable:
 
-    docker run --name my-github-pages \
-        --detach --restart unless-stopped \
-        --publish 4000:4000 \
-        --volume /path/to/my/project:/var/lib/github-pages \
+    docker run --rm --tty --publish 4000:4000 \
+        --volume ${PWD}:/var/lib/github-pages \
         --env PAGES_REPO_NWO=username/repo-name \
         jmlemetayer/github-pages
 
