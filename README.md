@@ -1,4 +1,4 @@
-[![Docker Image][mbadger-image]][mbadger] [![Docker Pulls][shields-pulls]][hub] [![Docker Stars][shields-stars]][hub]
+[![dockeri.co][dockeri.co]][hub.docker]
 
 # Quick Start
 
@@ -41,9 +41,6 @@ environment variable:
         --env PAGES_REPO_NWO=username/repo-name \
         jmlemetayer/github-pages
 
-[hub]: https://hub.docker.com/r/jmlemetayer/github-pages
-[shields-pulls]: https://img.shields.io/docker/pulls/jmlemetayer/github-pages.svg
-[shields-stars]: https://img.shields.io/docker/stars/jmlemetayer/github-pages.svg
-[mbadger]: https://microbadger.com/images/jmlemetayer/github-pages
-[mbadger-image]: https://images.microbadger.com/badges/image/jmlemetayer/github-pages.svg
+[hub.docker]: https://hub.docker.com/r/jmlemetayer/github-pages
+[dockeri.co]: https://dockeri.co/image/jmlemetayer/github-pages
 [github-metadata]: https://github.com/jekyll/github-metadata
